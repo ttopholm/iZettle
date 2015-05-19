@@ -1,0 +1,2 @@
+# iZettle
+Plugin for Cordova
