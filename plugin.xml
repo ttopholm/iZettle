@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="dk.sugee.iZettle"
+        version="0.7.0">
+
+  <name>iZettle</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/iZettle.js" target="js/iZettle.js"/>
+
+  <js-module src="www/iZettle.js" name="iZettle">
+    <clobbers target="iZettle" />
+  </js-module>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="iZettle">
+        <param name="ios-package" value="iZettle" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/iZettle.h" target-dir="iZettlePlugin"/>
+    <source-file src="src/ios/iZettle.m" target-dir="iZettlePlugin"/>
+  </platform>
+
+
+</plugin>
