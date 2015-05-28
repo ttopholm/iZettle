@@ -89,17 +89,15 @@
 
 - (NSDictionary*) convertPaymentInfo:(iZettleSDKPaymentInfo *)paymentInfo {
     return @{
-             @"referenceNumber": paymentInfo.referenceNumber,
-             @"entryMode": paymentInfo.entryMode,
-             @"obfuscatedPan": paymentInfo.obfuscatedPan,
-             @"panHash": paymentInfo.panHash,
-             @"cardBrand": paymentInfo.cardBrand,
-             @"AID": paymentInfo.AID,
-             @"TSI": paymentInfo.TSI,
-             @"TVR": paymentInfo.TVR,
-             @"applicationName": paymentInfo.applicationName,
-             @"numberOfInstallments": paymentInfo.numberOfInstallments,
-             @"installmentAmount": paymentInfo.installmentAmount
+             @"referenceNumber": [NSString stringWithString:paymentInfo.referenceNumber],
+             @"entryMode": [NSString stringWithString:paymentInfo.entryMode],
+             @"obfuscatedPan": [NSString stringWithString:paymentInfo.obfuscatedPan],
+             @"panHash": [NSString stringWithString:paymentInfo.panHash],
+             @"cardBrand": [NSString stringWithString:paymentInfo.cardBrand],
+             @"AID": [NSString stringWithString:paymentInfo.AID],
+             @"TSI": [NSString stringWithString:paymentInfo.TSI],
+             @"TVR": [NSString stringWithString:paymentInfo.TVR],
+             @"applicationName": [NSString stringWithString:paymentInfo.applicationName]
              };
 }
 
